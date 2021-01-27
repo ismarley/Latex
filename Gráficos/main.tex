@@ -25,6 +25,7 @@
 
 \usepackage{pgfplots} %Permite criar gráficos em Latex
 \pgfplotsset{compat=1.5} %This will configure the compatibility layer.You should have at leastcompat=1.3. The suggested value is printed to the.logfile after running TEX.
+\usepackage{pgfplotstable} %pacote para importar dados para o latex
 \usepackage{filecontents} %Permite importar dados em arquivos .CSV para Latex
 
 \usepackage{graphicx,color}
@@ -50,14 +51,14 @@
 
 \begin{filecontents*}{dados.csv}
 DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
-1,96.6458333333333,90.821052631579,“Petroquimica”,13.7,$<$1.000,54,223,12
-2,83.890243902439,97.65625,“Ger.Energia”,4.5,5000,210,130,11
-3,93.8720930232558,84.7317073170732,“Siderurgica”,4,10000,109,52,20
-4,86.6595744680851,89.9166666666667,“Textil”,8,20000,115,32,9
-5,99.7738095238095,86.63,“Papel”,11.2,30000,46,6,38
-6,86.7441860465116,82.7244897959184,“Aliment.”,4.2,40000,16,44,5
-7,93.76,92.6666666666667,“Mineracao”,11,50000,17,19,9
-9,84.6966292134831,87.8414634146342,“Outras”,7.8,10000,13,74,7
+1,96.6458333333333,90.821052631579,Petroquímica,13.7,$<$1.000,54,223,12
+2,83.890243902439,97.65625,Ger.Energia,4.5,5.000,210,130,11
+3,93.8720930232558,84.7317073170732,Siderúrgica,4,10.000,109,52,20
+4,86.6595744680851,89.9166666666667,Têxtil,8,20.000,115,32,9
+5,99.7738095238095,86.63,Papel,11.2,30.000,46,6,38
+6,86.7441860465116,82.7244897959184,Aliment.,4.2,40.000,16,44,5
+7,93.76,92.6666666666667,Mineração,11,50.000,17,19,9
+9,84.6966292134831,87.8414634146342,Outras,7.8,100.000,13,74,7
 10,80.7682926829268,85.72,,,,,,
 11,89.75,92.8823529411765,,,,,,
 12,90.71875,85.8260869565217,,,,,,
@@ -68,7 +69,16 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 28,98.2,99.4,,,,,,
 \end{filecontents*}
 
-
+\pgfplotstableread[col sep=comma]{dados.csv}\datatable
+\makeatletter
+\pgfplotsset{
+	/pgfplots/flexible xticklabels from table/.code n args={3}{%
+		\pgfplotstableread[#3]{#1}\coordinate@table
+		\pgfplotstablegetcolumn{#2}\of{\coordinate@table}\to\pgfplots@xticklabels
+		\let\pgfplots@xticklabel=\pgfplots@user@ticklabel@list@x
+	}
+}
+\makeatother
 \begin{document}
 
 \setlength{\parindent}{0pt} %para nao ter identação nos paragrafos
@@ -135,8 +145,8 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
 		ylabel={Descarte de efluentes (milhões m$^3$/d)},
 		%xlabel={Capacidade do tratamento (m$^3$/d)},
-		symbolic x coords={Petroquímica, Ger. Energia, Siderúrgica, Têxtil, Papel, Aliment., Mineração, Outras},
-		%xticklabel={IndDescarte},
+		flexible xticklabels from table={dados.csv}{IndDescarte}{col sep=comma},
+		xticklabel style={text height=1.5ex}, % To make sure the text labels are nicely aligned
 		xtick=data,
 		axis x line*=bottom, 
 		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
@@ -146,7 +156,8 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		nodes near coords align={vertical},
 		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
 		]
-		\addplot [black, fill=gray] coordinates{(Petroquímica,13.7) (Ger. Energia,4.5) (Siderúrgica,4) (Têxtil,8) (Papel,11.2) (Aliment.,4.2) (Mineração,11) (Outras,7.8)};		
+		%\addplot [black, fill=gray] coordinates{(Petroquímica,13.7) (Ger. Energia,4.5) (Siderúrgica,4) (Têxtil,8) (Papel,11.2) (Aliment.,4.2) (Mineração,11) (Outras,7.8)};	
+		\addplot table[x expr=\coordindex,y=VazDescarte, color=black, fill=gray]{\datatable};	
 		\end{axis}
 		
 		\end{tikzpicture}
@@ -160,7 +171,9 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		width=0.4\linewidth, %Define a largura do gráfico.
 		ylabel={Frequência},
 		xlabel={Capacidade do tratamento (m$^3$/d)},
-		symbolic x coords={$<$1.000,5.000,10.000,20.000,30.000,40.000,50.000,100.000},
+		%symbolic x coords={$<$1.000,5.000,10.000,20.000,30.000,40.000,50.000,100.000},
+		flexible xticklabels from table={dados.csv}{CapTrat}{col sep=comma},
+		xticklabel style={text height=1.5ex}, % To make sure the text labels are nicely aligned
 		xtick=data,
 		axis x line*=bottom, 
 		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
@@ -172,8 +185,9 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		nodes near coords align={vertical},
 		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
 		]
-		\addplot [black, fill=gray]
-		coordinates{($<$1.000,54) (5.000,210) (10.000,109)(20.000,115) (30.000,46)(40.000,16)(50.000,17)(100.000,13)};
+		%\addplot [black, fill=gray]
+		%coordinates{($<$1.000,54) (5.000,210) (10.000,109)(20.000,115) (30.000,46)(40.000,16)(50.000,17)(100.000,13)};
+		\addplot table[x expr=\coordindex,y=Freq, color=black, fill=gray]{\datatable};
 		\end{axis}
 		
 		\end{tikzpicture}
@@ -190,7 +204,8 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
 		ylabel={Número de PSM},
 		%xlabel={Capacidade do tratamento (m$^3$/d)},
-		symbolic x coords={Petroquímica, Ger. Energia, Siderúrgica, Têxtil, Papel, Aliment., Mineração, Outras},
+		flexible xticklabels from table={dados.csv}{IndDescarte}{col sep=comma},
+		xticklabel style={text height=1.5ex}, % To make sure the text labels are nicely aligned
 		xtick=data,
 		axis x line*=bottom, 
 		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
@@ -202,7 +217,7 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		nodes near coords align={vertical},
 		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
 		]
-		\addplot [black, fill=gray] coordinates{(Petroquímica,223) (Ger. Energia,130) (Siderúrgica,52) (Têxtil,32) (Papel,6) (Aliment.,44) (Mineração,19) (Outras,74)};
+		\addplot table[x expr=\coordindex,y=NumPSM, color=black, fill=gray]{\datatable};
 		\end{axis}
 		
 		\end{tikzpicture}
@@ -216,7 +231,8 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		width=0.4\linewidth, %Define a largura do gráfico.
 		ylabel={Capacidade (milhares m$^3$/d)},
 		%xlabel={Capacidade do tratamento (m$^3$/d)},
-		symbolic x coords={Petroquímica, Ger. Energia, Siderúrgica, Têxtil, Papel, Aliment., Mineração, Outras},
+		flexible xticklabels from table={dados.csv}{IndDescarte}{col sep=comma},
+		xticklabel style={text height=1.5ex}, % To make sure the text labels are nicely aligned
 		xtick=data,
 		axis x line*=bottom, 
 		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
@@ -228,7 +244,7 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 		nodes near coords align={vertical},
 		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
 		]
-		\addplot [black, fill=gray] coordinates{(Petroquímica,12) (Ger. Energia,11) (Siderúrgica,20) (Têxtil,9) (Papel,38) (Aliment.,5) (Mineração,9) (Outras,7)};
+		\addplot table[x expr=\coordindex,y=CapMedTrat, color=black, fill=gray]{\datatable};
 		\end{axis}
 		
 		\end{tikzpicture}
@@ -241,7 +257,6 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 	\newpage
 
 %===============================================================================
-
 
 
 

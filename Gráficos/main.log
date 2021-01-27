@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.9)  27 JAN 2021 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.9)  27 JAN 2021 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,7 +624,24 @@ File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
 de.tex
 File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)))
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplotstable 2018/03/28 v1.16 Table typesetting and Pretty-printing (
+1.16)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code
+.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.colt
+ype.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen268
+\ar@mcellbox=\box61
+\extrarowheight=\dimen269
+\NC@list=\toks38
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box62
+))
 (/usr/share/texlive/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2019/09/20 v1.5 Create an external file from within a LaT
 eX document
@@ -646,15 +663,15 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@cnth=\count310
 \Gm@cntv=\count311
 \c@Gm@tempcnt=\count312
-\Gm@bindingoffset=\dimen268
-\Gm@wd@mp=\dimen269
-\Gm@odd@mp=\dimen270
-\Gm@even@mp=\dimen271
-\Gm@layoutwidth=\dimen272
-\Gm@layoutheight=\dimen273
-\Gm@layouthoffset=\dimen274
-\Gm@layoutvoffset=\dimen275
-\Gm@dimlist=\toks38
+\Gm@bindingoffset=\dimen270
+\Gm@wd@mp=\dimen271
+\Gm@odd@mp=\dimen272
+\Gm@even@mp=\dimen273
+\Gm@layoutwidth=\dimen274
+\Gm@layoutheight=\dimen275
+\Gm@layouthoffset=\dimen276
+\Gm@layoutvoffset=\dimen277
+\Gm@dimlist=\toks39
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
@@ -665,31 +682,31 @@ Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen276
-\captionmargin@=\dimen277
-\captionwidth=\dimen278
-\caption@tempdima=\dimen279
-\caption@indent=\dimen280
-\caption@parindent=\dimen281
-\caption@hangindent=\dimen282
+\captionmargin=\dimen278
+\captionmargin@=\dimen279
+\captionwidth=\dimen280
+\caption@tempdima=\dimen281
+\caption@indent=\dimen282
+\caption@parindent=\dimen283
+\caption@hangindent=\dimen284
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count313
 \c@continuedfloat=\count314
 )
 \c@KVtest=\count315
-\sf@farskip=\skip52
-\sf@captopadj=\dimen283
-\sf@capskip=\skip53
-\sf@nearskip=\skip54
+\sf@farskip=\skip54
+\sf@captopadj=\dimen285
+\sf@capskip=\skip55
+\sf@nearskip=\skip56
 \c@subfigure=\count316
 \c@subfigure@save=\count317
 \c@lofdepth=\count318
 \c@subtable=\count319
 \c@subtable@save=\count320
 \c@lotdepth=\count321
-\sf@top=\skip55
-\sf@bottom=\skip56
+\sf@top=\skip57
+\sf@bottom=\skip58
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -698,29 +715,30 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 LaTeX Warning: File `dados.csv' already exists on the system.
                Not generating it from this source.
 
+PGFPlots: reading {dados.csv}
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count322
-\l__pdf_internal_box=\box61
+\l__pdf_internal_box=\box63
 )
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 72
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 82
 .
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -729,16 +747,16 @@ ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count323
-\scratchdimen=\dimen284
-\scratchbox=\box62
+\scratchdimen=\dimen286
+\scratchbox=\box64
 \nofMPsegments=\count324
 \nofMParguments=\count325
-\everyMPshowfont=\toks39
+\everyMPshowfont=\toks40
 \MPscratchCnt=\count326
-\MPscratchDim=\dimen285
+\MPscratchDim=\dimen287
 \MPnumerator=\count327
 \makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks40
+\everyMPtoPDFconversion=\toks41
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -790,35 +808,104 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 PGFPlots: reading {dados.csv}
 PGFPlots: reading {dados.csv}
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+LaTeX Font Info:    Trying to load font information for U+msa on input line 122
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+LaTeX Font Info:    Trying to load font information for U+msb on input line 122
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./main.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+PGFPlots: reading {dados.csv}
+
+NOTE: coordinate (8.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (9.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.0e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.1e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.2e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.3e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.4e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.5e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+PGFPlots: reading {dados.csv}
+NOTE: coordinate (8.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (9.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.0e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.1e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.2e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.3e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.4e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.5e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+PGFPlots: reading {dados.csv}
+NOTE: coordinate (8.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (9.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.0e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.1e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.2e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.3e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.4e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.5e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+PGFPlots: reading {dados.csv}
+NOTE: coordinate (8.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (9.0e0,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.0e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.1e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.2e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.3e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.4e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+NOTE: coordinate (1.5e1,) has been dropped because of a coordinate filter. (see
+ also unbounded coords=jump). 
+[2] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 27530 strings out of 483163
- 688978 string characters out of 5965511
- 1045720 words of memory out of 5000000
- 42099 multiletter control sequences out of 15000+600000
+ 28204 strings out of 483163
+ 711250 string characters out of 5965511
+ 1070420 words of memory out of 5000000
+ 42760 multiletter control sequences out of 15000+600000
  547638 words of font info for 50 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 68i,19n,104p,870b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/sh
-are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-
-Output written on main.pdf (2 pages, 58708 bytes).
+ 68i,19n,104p,870b,2397s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb>
+Output written on main.pdf (2 pages, 58821 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
