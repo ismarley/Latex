@@ -1,0 +1,248 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+%Pacote para utilizar os caracteres em português, inclusive com os acentos
+
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+%Pacote para inserir o idioma do texto e configurar alguns comandos - Pelo jeito o último idioma tem preferência.
+
+\def\Year{\expandafter\YEAR\the\year}
+\def\YEAR#1#2#3#4{#1#2#3#4}
+%As duas linhas acima definem o comando \Year que permite usar automaticamente o ano que está sendo compilado o arquivo. Útil para capa dos trabalhos e fontes de figuras e tabelas geradas pelo autor.
+
+%\usepackage{pslatex}
+\usepackage{times}
+%Os dois pacotes acima alteram o tipo de letra para Times New Roman
+
+\usepackage{amsmath,amsfonts,amssymb}
+%Os dois pacotes acima são da American Mathematical Society para utilizar símbolo matemáticos no texto. O último evita a compactação da fração.
+
+\usepackage{indentfirst}
+% Pacote para colocar o avanço da primeira linha do parágrafo
+
+\usepackage{pgfgantt}
+
+\usepackage{pgfplots} %Permite criar gráficos em Latex
+\pgfplotsset{compat=1.5} %This will configure the compatibility layer.You should have at leastcompat=1.3. The suggested value is printed to the.logfile after running TEX.
+\usepackage{filecontents} %Permite importar dados em arquivos .CSV para Latex
+
+\usepackage{graphicx,color}
+%Pacote para inserir Figures e colorir o texto
+
+\usepackage{amsmath} \numberwithin{figure}{section}	
+%Este pacote é para numerar Figures com mais de um número
+
+\usepackage[a4paper, top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+%Pacote para formatar as margens do texto
+
+\usepackage{subfig} %Permite colocar várias figuras lado a lado, com numeração automática de Figura "a", Figura "b"...
+\usepackage{setspace}
+%Pacote para alterar o espaçamento entre linhas
+
+\linespread{1.5}
+%Comando para colocar o espaçamento entre linhas no documento inteiro - Não utilizar unidade
+
+
+
+%======Importação dos Dados para o Latéx =============
+
+
+\begin{filecontents*}{dados.csv}
+DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
+1,96.6458333333333,90.821052631579,“Petroquimica”,13.7,$<$1.000,54,223,12
+2,83.890243902439,97.65625,“Ger.Energia”,4.5,5000,210,130,11
+3,93.8720930232558,84.7317073170732,“Siderurgica”,4,10000,109,52,20
+4,86.6595744680851,89.9166666666667,“Textil”,8,20000,115,32,9
+5,99.7738095238095,86.63,“Papel”,11.2,30000,46,6,38
+6,86.7441860465116,82.7244897959184,“Aliment.”,4.2,40000,16,44,5
+7,93.76,92.6666666666667,“Mineracao”,11,50000,17,19,9
+9,84.6966292134831,87.8414634146342,“Outras”,7.8,10000,13,74,7
+10,80.7682926829268,85.72,,,,,,
+11,89.75,92.8823529411765,,,,,,
+12,90.71875,85.8260869565217,,,,,,
+14,83.7040816326531,89.7857142857143,,,,,,
+17,83.7684210526316,96.7,,,,,,
+20,94,83.8674698795181,,,,,,
+25,97.3,99.5,,,,,,
+28,98.2,99.4,,,,,,
+\end{filecontents*}
+
+
+\begin{document}
+
+\setlength{\parindent}{0pt} %para nao ter identação nos paragrafos
+\setlength{\parskip}{1.5ex} %para espaçamento entre paragrafos
+\section{Exemplos de gráficos de linhas}
+
+\begin{figure}[!h]
+	\centering
+	\caption{Eficiência de remoção de DQO dos reatores}
+	\label{DQO reatores}
+	\begin{tikzpicture}
+	\begin{axis}[legend entries={Reator 1, Reator 2},
+	width=0.7\linewidth, %Define a largura do gráfico.
+	height=7cm, %Se quiser alterar a altura do gráfico.
+	xmin=0,
+	%xmax=25, %limite máximo do eixo x
+	axis x line=bottom, 
+	axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
+	ymin=0,
+	ymax=100,
+	%xtickmin=0,
+	%xtickmax=20, %Defini o menor e maior valor do eixo. Ajuda a distribuir os valores
+	%xtick={0,5,...,20}, %Define quantos valores aparecem no eixo x 	
+	ytick={0,10,...,100},
+	%minor x tick num=2, %Se precisar colocar marcas adicionais
+	legend style={
+		at={(0.8,-0.25)}, %posição da legenda
+		draw=none, %remove as linhas em volta da legenda
+		%anchor=north,
+		legend columns=2, %número de colunas na legenda
+		%cells={anchor=west},
+		%font=\footnotesize,
+		%rounded corners=2pt,
+	}, 
+	%reverse legend, %legend pos=outer north east,
+	xlabel=Tempo (d),
+	ylabel=Eficiência de remoção de DQO (\%),
+	]
+	\addplot table [x=DiasEfDQO, y=EfDQOR1, col sep=comma,] {dados.csv}; %se quiser mudar a cor da linha só adicionar a cor assim: \addplot [black] table [x=...]
+	\addplot table [x=DiasEfDQO, y=EfDQOR2, col sep=comma,] {dados.csv};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{center}
+		{\footnotesize Fonte: do autor (\Year).} 
+	\end{center}
+\end{figure}
+
+	
+\newpage
+%===============================================================================
+
+
+\section{Exemplos de gráficos de barras}
+
+\begin{figure}[!h]
+	\centering
+	\subfloat[Descarte de águas residuárias de tipologias industriais na China]{
+		\begin{tikzpicture}
+		\begin{axis}[
+		width=0.4\linewidth, %Define a largura do gráfico.
+		ybar,
+		enlargelimits=0.15,
+		legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
+		ylabel={Descarte de efluentes (milhões m$^3$/d)},
+		%xlabel={Capacidade do tratamento (m$^3$/d)},
+		symbolic x coords={Petroquímica, Ger. Energia, Siderúrgica, Têxtil, Papel, Aliment., Mineração, Outras},
+		%xticklabel={IndDescarte},
+		xtick=data,
+		axis x line*=bottom, 
+		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
+		%nodes near coords, %coloca os valores acima das barras
+		ymin=0,
+		ymax=15,
+		nodes near coords align={vertical},
+		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
+		]
+		\addplot [black, fill=gray] coordinates{(Petroquímica,13.7) (Ger. Energia,4.5) (Siderúrgica,4) (Têxtil,8) (Papel,11.2) (Aliment.,4.2) (Mineração,11) (Outras,7.8)};		
+		\end{axis}
+		
+		\end{tikzpicture}
+		
+		
+	}
+	\qquad %Coloca as duas na mesma linha
+	\subfloat[Histograma da capacidade das plantas de tratamento por membrana na China]{
+		\begin{tikzpicture}
+		\begin{axis}[ybar,enlargelimits=0.15,legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
+		width=0.4\linewidth, %Define a largura do gráfico.
+		ylabel={Frequência},
+		xlabel={Capacidade do tratamento (m$^3$/d)},
+		symbolic x coords={$<$1.000,5.000,10.000,20.000,30.000,40.000,50.000,100.000},
+		xtick=data,
+		axis x line*=bottom, 
+		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
+		%nodes near coords, %coloca os valores acima das barras
+		ymin=0,
+		ymax=250,
+		ytick={0,50,...,200},
+		nodes near coords,
+		nodes near coords align={vertical},
+		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
+		]
+		\addplot [black, fill=gray]
+		coordinates{($<$1.000,54) (5.000,210) (10.000,109)(20.000,115) (30.000,46)(40.000,16)(50.000,17)(100.000,13)};
+		\end{axis}
+		
+		\end{tikzpicture}
+		
+	}
+	\\
+	
+	\subfloat[Número de plantas de PSM por indústria]{
+		\begin{tikzpicture}
+		\begin{axis}[
+		width=0.4\linewidth, %Define a largura do gráfico.
+		ybar,
+		enlargelimits=0.15,
+		legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
+		ylabel={Número de PSM},
+		%xlabel={Capacidade do tratamento (m$^3$/d)},
+		symbolic x coords={Petroquímica, Ger. Energia, Siderúrgica, Têxtil, Papel, Aliment., Mineração, Outras},
+		xtick=data,
+		axis x line*=bottom, 
+		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
+		%nodes near coords, %coloca os valores acima das barras
+		ymin=0,
+		ymax=250,
+		ytick={0,50,...,200},
+		nodes near coords, %coloca os valores acima das barras
+		nodes near coords align={vertical},
+		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
+		]
+		\addplot [black, fill=gray] coordinates{(Petroquímica,223) (Ger. Energia,130) (Siderúrgica,52) (Têxtil,32) (Papel,6) (Aliment.,44) (Mineração,19) (Outras,74)};
+		\end{axis}
+		
+		\end{tikzpicture}
+		
+		
+	}
+	\qquad %Coloca as duas na mesma linha
+	\subfloat[Capacidade média de tratamento das plantas com membrana]{
+		\begin{tikzpicture}
+		\begin{axis}[ybar,enlargelimits=0.15,legend style={at={(0.5,-0.2)},anchor=north,legend columns=-1},
+		width=0.4\linewidth, %Define a largura do gráfico.
+		ylabel={Capacidade (milhares m$^3$/d)},
+		%xlabel={Capacidade do tratamento (m$^3$/d)},
+		symbolic x coords={Petroquímica, Ger. Energia, Siderúrgica, Têxtil, Papel, Aliment., Mineração, Outras},
+		xtick=data,
+		axis x line*=bottom, 
+		axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
+		%nodes near coords, %coloca os valores acima das barras
+		ymin=0,
+		ymax=45,
+		ytick={0,10,...,40},
+		nodes near coords,
+		nodes near coords align={vertical},
+		x tick label style={rotate=45,anchor=east}, %Caso queira rotacionar os rótulos do eixo x
+		]
+		\addplot [black, fill=gray] coordinates{(Petroquímica,12) (Ger. Energia,11) (Siderúrgica,20) (Têxtil,9) (Papel,38) (Aliment.,5) (Mineração,9) (Outras,7)};
+		\end{axis}
+		
+		\end{tikzpicture}
+		
+	}
+	
+	
+\end{figure}
+
+	\newpage
+
+%===============================================================================
+
+
+
+
+\end{document}
