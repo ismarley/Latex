@@ -15,6 +15,7 @@
 \usepackage{times}
 %Os dois pacotes acima alteram o tipo de letra para Times New Roman
 
+\usepackage{verbatim} %permite comentar várias linhas
 \usepackage{amsmath,amsfonts,amssymb}
 %Os dois pacotes acima são da American Mathematical Society para utilizar símbolo matemáticos no texto. O último evita a compactação da fração.
 
@@ -132,17 +133,63 @@ DiasEfDQO,EfDQOR1,EfDQOR2,IndDescarte,VazDescarte,CapTrat,Freq,NumPSM,CapMedTrat
 \newpage
 %===============================================================================
 
-Gráfico Profissional
+\section{Gráfico com regressão}
+
 
 \begin{figure}[!h]
 	\centering
 	\caption{Eficiência de remoção de DQO dos reatores}
-	\label{DQOProfissional}
+	\label{DQORegressão}
+\begin{tikzpicture}
+\begin{axis}[legend entries={Reator 1, Reator 2},
+width=0.7\linewidth, %Define a largura do gráfico.
+height=7cm, %Se quiser alterar a altura do gráfico.
+xmin=0,
+%xmax=25, %limite máximo do eixo x
+axis x line=bottom, 
+axis y line=left, %por padrão, o tikz faz uma caixa (box) com linhas não só nos eixos x e y, mas também na direita e em cima. Estes dois comandos anteriores fazem ficar só os eixos.
+ymin=0,
+ymax=100,
+%xtickmin=0,
+%xtickmax=20, %Defini o menor e maior valor do eixo. Ajuda a distribuir os valores
+%xtick={0,5,...,20}, %Define quantos valores aparecem no eixo x 	
+ytick={0,10,...,100},
+%minor x tick num=2, %Se precisar colocar marcas adicionais
+legend style={
+	at={(0.8,-0.25)}, %posição da legenda
+	draw=none, %remove as linhas em volta da legenda
+	%anchor=north,
+	legend columns=2, %número de colunas na legenda
+	%cells={anchor=west},
+	%font=\footnotesize,
+	%rounded corners=2pt,
+}, 
+%reverse legend, %legend pos=outer north east,
+xlabel=Tempo (d),
+ylabel=Eficiência de remoção de DQO (\%),
+]
+\addplot table [x=DiasEfDQO, y=EfDQOR1, col sep=comma,] {dados.csv}; %se quiser mudar a cor da linha só adicionar a cor assim: \addplot [black] table [x=...]
+\addplot table [x=DiasEfDQO, y=EfDQOR2, col sep=comma,] {dados.csv};
+\addplot [black] table [x=DiasEfDQO, y={create col/linear regression={y=EfDQOR1}}, col sep=comma,] {dados.csv}; % compute a linear regression from the input table
 
+
+\end{axis}
+\end{tikzpicture}
+
+\begin{center}
+	{\footnotesize Fonte: do autor (\Year).} 
+\end{center}
+	
 	
 	
 \end{figure}
 
+%Se quiser acrescentar a equação da regressão na legenda
+\begin{comment}
+\addlegendentry{%
+$\pgfmathprintnumber{\pgfplotstableregressiona} \cdot x
+\pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$ lin. Regression} %
+\end{comment}
 
 \newpage
 %===============================================================================
