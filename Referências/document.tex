@@ -1,10 +1,22 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[brazil]{babel} %Pacote para inserir o idioma do texto e configurar alguns comandos.
+\usepackage{times} %Altera o tipo de letra para Times New Roman
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{indentfirst} % Pacote para colocar o avanço da primeira linha do parágrafo
+\usepackage{subfiles} %Para colocar subarquivos e poder compilá-los isoladamente sem ter que compilar o arquivo principal
+%======================================================================
+\usepackage{setspace} %Pacote para alterar o espaçamento entre linhas
+
+\linespread{1.5}
+%Comando para colocar o espaçamento entre linhas no documento inteiro - Não utilizar unidade
+%=================================================================================================
+
+\usepackage[a4paper, top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry} %Pacote para formatar as margens do texto
 
 %==========Para o pacote Biblatex-abnt funcionar tem que mudar as opções no TeXstudio de BibTex para Biber==========
 \usepackage[backend=biber,
@@ -30,13 +42,10 @@ autocite=superscript
 	Vamos testar agora se essa parada funciona
 	
 	\section{Introdução}
-	Será que se eu citar agora o \cite{Bacchin2006}
-	sdhasdas 
 	
-	asdjahdakjdh ad
-	
-	asdajdhaj
-	
+		\input{Sections/Introduction.tex}
+		
+	%===============================================================================
 	\section{Metodologia}
 	Se eu citar alguma coisa antes que seja depois alfabeticamente \cite{Ghangrekar2005}
 	
