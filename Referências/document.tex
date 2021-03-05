@@ -1,0 +1,56 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage[backend=biber,
+style=abnt, %style to use, other styles are nature, science or apa abnt-numeric,   % Sistema numérico% style    = abnt-ibid,      % Notas de referência
+justify, %Imprime o texto justificado em vez de alinhado à esquerda
+%sorting=none, %A ordem dos autores na lista de referências será de acordo com a ordem de citação no texto
+%natbib=true,
+url=false, 
+doi=true, %display DOI with link
+%eprint=false, %display arxiv id etc
+%maxnames=25, %number of names in List of references
+%maxcitenames=2, % number of names for textcite command
+autocite=superscript
+]{biblatex}
+
+ %Path of bib file (either in current dir or in --input-directory)
+
+\addbibresource{referencia.bib}
+
+
+\begin{document}
+	
+	Vamos testar agora se essa parada funciona
+	
+	\section{Introdução}
+	Será que se eu citar agora o \cite{Bacchin2006}
+	sdhasdas 
+	
+	asdjahdakjdh ad
+	
+	asdajdhaj
+	
+	\section{Metodologia}
+	Se eu citar alguma coisa antes que seja depois alfabeticamente \cite{Ghangrekar2005}
+	
+	e se eu citar o \cite{Ferreira2013}
+	
+	dadadasdas
+	
+	tem a opção de  \textcite{Morais2016}
+	
+	\cites{Morais2016a}{Yu2001}
+	
+
+	
+	\section{Referências}
+	
+	\printbibliography
+	
+\end{document}

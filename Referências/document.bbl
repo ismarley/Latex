@@ -1,0 +1,319 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Bacchin2006}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3f31fd42fc037c6347be27d45eae93e8}{%
+           family={Bacchin},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=800ef23008d959fc1386a460172c2862}{%
+           family={Aimar},
+           familyi={A\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=643dd948b2961162619e6baebb890e02}{%
+           family={Field},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9970ef47cf0c601744a6db9029d3b67a}
+      \strng{fullhash}{9970ef47cf0c601744a6db9029d3b67a}
+      \strng{bibnamehash}{9970ef47cf0c601744a6db9029d3b67a}
+      \strng{authorbibnamehash}{9970ef47cf0c601744a6db9029d3b67a}
+      \strng{authornamehash}{9970ef47cf0c601744a6db9029d3b67a}
+      \strng{authorfullhash}{9970ef47cf0c601744a6db9029d3b67a}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Over the last 10 years, numerous membrane filtration data have been viewed through the lens of the concept of critical flux. This concept, used in a number of different ways often without explicit redefinition, is here clarified both theoretically and from an experimental viewpoint. A link is made with the concept of sustainable flux and an approach given for the determination of the apparent sustainable flux. To retain the utility of the critical flux concepts, it is emphasised firstly that the strong form and weak form of the critical flux, Jcs and Jcw, must be evaluated via a check on whether or not the overall resistance has remained invariant. Secondly, the critical flux for irreversibility, Jci, has a sound theoretical basis; it represents the shift from repulsive interaction (dispersed matter-polarised layer) to attractive interaction (condensed matter-deposit). The various methods for measuring critical flux and the influence of membrane and suspension properties on critical flux are reviewed. Dispersive forces that are the key to the existence of a critical flux are discussed. The concept of a critical concentration for phase transition is also introduced. For theoreticians and experimentalists, this and the clarified concept of a small set of critical fluxes will continue to provide a valuable framework. But in addition, and especially for membrane users dealing with industrial process streams, the concept of a sustainable flux (which has evolved from critical flux thinking) is of a great utility. Above the sustainable flux (dependent on hydrodynamics, feed conditions and process time), the rate of fouling is economically and environmentally unsustainable. © 2006 Elsevier B.V. All rights reserved.}
+      \field{isbn}{03767388}
+      \field{issn}{03767388}
+      \field{journaltitle}{J. Memb. Sci.}
+      \field{number}{1-2}
+      \field{title}{{Critical and sustainable fluxes: Theory, experiments and applications}}
+      \field{volume}{281}
+      \field{year}{2006}
+      \field{pages}{42\bibrangedash 69}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1016/j.memsci.2006.04.014
+      \endverb
+      \verb{file}
+      \verb :home/imorais/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Bacchin, Aimar, Field - 2006 - Critical and sustainable fluxes Theory, experiments and applications.pdf:pdf
+      \endverb
+      \keyw{Colloid,Critical flux,Fouling,Microfiltration,Nanofiltration,Reverse osmosis,Ultrafiltration}
+    \endentry
+    \entry{Ferreira2013}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=02b107ba4c045c764057a3261a4aa312}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Eric\bibnamedelima Batista},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2c5f1e76e27b4f89951646ebc8ab931}{%
+           family={Cavalcanti},
+           familyi={C\bibinitperiod},
+           given={P{ó}rtya\bibnamedelima Piscitelli},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05bc8ad77667dca58ff2fab6150620f9}{%
+           family={Nogueira},
+           familyi={N\bibinitperiod},
+           given={Denismar\bibnamedelima Alves},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{81ecce8514ee71e60f34eb7360254692}
+      \strng{fullhash}{81ecce8514ee71e60f34eb7360254692}
+      \strng{bibnamehash}{81ecce8514ee71e60f34eb7360254692}
+      \strng{authorbibnamehash}{81ecce8514ee71e60f34eb7360254692}
+      \strng{authornamehash}{81ecce8514ee71e60f34eb7360254692}
+      \strng{authorfullhash}{81ecce8514ee71e60f34eb7360254692}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{R package version 1.1.2}
+      \field{title}{{Experimental Designs package}}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://cran.r-project.org/package=ExpDes.pt
+      \endverb
+      \verb{url}
+      \verb http://cran.r-project.org/package=ExpDes.pt
+      \endverb
+    \endentry
+    \entry{Ghangrekar2005}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f1d7bd9101fee149153146d9a06bf133}{%
+           family={Ghangrekar},
+           familyi={G\bibinitperiod},
+           given={M\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0a6cb4dfe495fdf1aa3ce12a1e73798}{%
+           family={Asolekar},
+           familyi={A\bibinitperiod},
+           given={S\bibnamedelima R},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c78db0e831f607a022ee11e68e1f9dc}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={S\bibnamedelima G},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2ed3bae749d0d56787019aadc8230f5}
+      \strng{fullhash}{c2ed3bae749d0d56787019aadc8230f5}
+      \strng{bibnamehash}{c2ed3bae749d0d56787019aadc8230f5}
+      \strng{authorbibnamehash}{c2ed3bae749d0d56787019aadc8230f5}
+      \strng{authornamehash}{c2ed3bae749d0d56787019aadc8230f5}
+      \strng{authorfullhash}{c2ed3bae749d0d56787019aadc8230f5}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Water Res.}
+      \field{number}{6}
+      \field{title}{{Characteristics of sludge developed under different loading conditions during UASB reactor start-up and granulation}}
+      \field{volume}{39}
+      \field{year}{2005}
+      \field{pages}{1123\bibrangedash 1133}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.watres.2004.12.018
+      \endverb
+      \verb{file}
+      \verb :home/imorais/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Ghangrekar, Asolekar, Joshi - 2005 - Characteristics of sludge developed under different loading conditions during UASB reactor start-up.pdf:pdf
+      \endverb
+      \keyw{granular sludge,mineral composition,olr,slr,sludge characteristics,uasb}
+    \endentry
+    \entry{Morais2016a}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4266cef3f8294735e296cba24a3e2813}{%
+           family={Morais},
+           familyi={M\bibinitperiod},
+           given={Ismarley\bibnamedelimb Lage\bibnamedelima Horta},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4266cef3f8294735e296cba24a3e2813}
+      \strng{fullhash}{4266cef3f8294735e296cba24a3e2813}
+      \strng{bibnamehash}{4266cef3f8294735e296cba24a3e2813}
+      \strng{authorbibnamehash}{4266cef3f8294735e296cba24a3e2813}
+      \strng{authornamehash}{4266cef3f8294735e296cba24a3e2813}
+      \strng{authorfullhash}{4266cef3f8294735e296cba24a3e2813}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Exame de Qualifica{ç}{ã}o: Tratamento de efluente de f{á}brica de celulose com lodo aer{ó}bio granular em biorreator termif{í}lico a membranas}}
+      \field{year}{2016}
+      \verb{file}
+      \verb :home/imorais/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Morais - 2016 - Exame de Qualifica{\c{c}}{\~{a}}o Tratamento de efluente de f{\'{a}}brica de celulose com lodo aer{\'{o}}bio granular em biorreator termif{\'{i}}.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Morais2016}{article}{}
+      \name{author}{5}{ul=1}{%
+        {{un=0,uniquepart=base,hash=4266cef3f8294735e296cba24a3e2813}{%
+           family={Morais},
+           familyi={M\bibinitperiod},
+           given={Ismarley\bibnamedelimb Lage\bibnamedelima Horta},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=328b9864af03fa240ec073ba647c34f2}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Claudio\bibnamedelima Mudadu},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a7fb2a09ac7f84d9e27feb7e4b98197}{%
+           family={Nascimento},
+           familyi={N\bibinitperiod},
+           given={Ant{ô}nio\bibnamedelima Galv{ã}o},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0,
+           prefix={do},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=a2eb23fa1d48830c2cdff53aba3aacbd}{%
+           family={Filho},
+           familyi={F\bibinitperiod},
+           given={Natalino\bibnamedelima Perovano},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9bc7dd07181579ce3a98a664d731f88f}{%
+           family={Dias},
+           familyi={D\bibinitperiod},
+           given={Jo{ã}o\bibnamedelimb Carlos\bibnamedelima Teixeira},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor {\&} Francis}%
+      }
+      \strng{namehash}{68fbc0e399c0fd48c4844636f3961010}
+      \strng{fullhash}{588cc0bb654588d2e03d157901e113a7}
+      \strng{bibnamehash}{68fbc0e399c0fd48c4844636f3961010}
+      \strng{authorbibnamehash}{68fbc0e399c0fd48c4844636f3961010}
+      \strng{authornamehash}{68fbc0e399c0fd48c4844636f3961010}
+      \strng{authorfullhash}{588cc0bb654588d2e03d157901e113a7}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{© 2016 Balaban Desalination Publications. All rights reserved.The formation of aerobic granules after the treatment of paper mill effluents was feasible. Granular sludge presented a lower fouling potential than flocculent sludge, allowing a higher flux through the membranes in a membrane bioreactor (MBR). However, it was observed that after filtration many of the biogranules disrupted, which increased the membrane fouling. Therefore, the formation of aggregates that are physically and mechanically more resistant to decomposition would be beneficial to an MBR process. This work determines which of the microorganisms found in the aerobic granular sludge contribute to microbial aggregation, thereby increasing the mechanical resistance of aggregates. Nineteen strains were isolated from granular aerobic sludge. Tests for coaggregation showed that some isolates (E2, E7, E9, E13, and E25) were able to improve the formation of granules, while others (E10, E14, E18, and E26) inhibited the aggregation. The extracellular polymeric substances analyses indicated which substances contributed to the granule formation. The mechanical resistance of the aggregates was determined and the results showed that isolate E19 substantially improved the resistance of the aggregates to disruption.}
+      \field{annotation}{From Duplicate 3 (Aerobic granular sludge to treat paper mill effluent: selection of ideal strains that contribute to the formation of strong aggregates - Morais, Ismarley Lage Horta; Silva, Claudio Mudadu; Nascimento, Ant{ô}nio Galv{ã}o do; Filho, Natalino Perovano; Dias, Jo{ã}o Carlos Teixeira) doi: 10.1080/19443994.2016.1192490}
+      \field{issn}{1944-3994}
+      \field{journaltitle}{Desalin. Water Treat.}
+      \field{month}{6}
+      \field{number}{59}
+      \field{title}{{Aerobic granular sludge to treat paper mill effluent : selection of ideal strains that contribute to the formation of strong aggregates}}
+      \field{volume}{57}
+      \field{year}{2016}
+      \field{pages}{28537\bibrangedash 28550}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/19443994.2016.1192490
+      \endverb
+      \verb{file}
+      \verb :home/imorais/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Morais et al. - 2016 - Aerobic granular sludge to treat paper mill effluent selection of ideal strains that contribute to the formation.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/19443994.2016.1192490
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/19443994.2016.1192490
+      \endverb
+      \keyw{Aggregate mechanical res,[Aerobic granular sludge}
+    \endentry
+    \entry{Yu2001}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=011e05b33ddfea3db2fd9b639a802324}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={H.\bibnamedelimi Q.},
+           giveni={H\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=127e1b9a02d44ccefc8423a310be7ed8}{%
+           family={Tay},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44fcb58aa3bc441cf3c705dcfae2308d}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi H\bibnamedelima P},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{31cf5829ed323f7b1ef47afa74dcdfb9}
+      \strng{fullhash}{31cf5829ed323f7b1ef47afa74dcdfb9}
+      \strng{bibnamehash}{31cf5829ed323f7b1ef47afa74dcdfb9}
+      \strng{authorbibnamehash}{31cf5829ed323f7b1ef47afa74dcdfb9}
+      \strng{authornamehash}{31cf5829ed323f7b1ef47afa74dcdfb9}
+      \strng{authorfullhash}{31cf5829ed323f7b1ef47afa74dcdfb9}
+      \field{sortinit}{Y}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Six upflow anaerobic sludge blanket (UASB) reactors were concurrently operated for 146 d to examine the effects of calcium on the sludge granulation process during start-up. Introduction of Ca2+ at concentrations from 150 to 300 mg/l enhanced the biomass accumulation and granulation process. The calcium concentration in the granules was nearly proportional to the calcium concentration in the feed, and calcium carbonate was the main calcium precipitate in the granules. The specific activity of granules decreased with increasing influent calcium concentration. The optimum calcium concentration for the granulation was from 150 to 300 mg/l. The addition of low-concentration calcium to the UASB reactors appeared to enhance the three steps of sludge granulation: adsorption, adhesion and multiplication, but it did not lead to a different proliferation of predominant microorganisms in the granules. © 2001 Elsevier Science Ltd.}
+      \field{journaltitle}{Water Res.}
+      \field{number}{4}
+      \field{title}{{The roles of calcium in sludge granulation during UASB reactor start-up}}
+      \field{volume}{35}
+      \field{year}{2001}
+      \field{pages}{1052\bibrangedash 1060}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/S0043-1354(00)00345-6
+      \endverb
+      \verb{file}
+      \verb :home/imorais/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Yu, Tay, Fang - 2001 - The roles of calcium in sludge granulation during UASB reactor start-up.pdf:pdf
+      \endverb
+      \keyw{Calcium,Granulation,Start-up,Upflow anaerobic sludge blanket (UASB) reactor}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
